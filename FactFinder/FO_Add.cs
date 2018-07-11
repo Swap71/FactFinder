@@ -232,8 +232,13 @@ namespace FactFinder
           
 
                 string S268 = System.Configuration.ConfigurationManager.AppSettings["C_FO_Type1"];
-           //     SelectElement oSelection268 = new SelectElement(driver.FindElement(By.XPath("//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_ClientFinancialObjectiveRow_0_ddlFinancialObjectiveType']")));//*[@id="ctl00_ddlFinancialObjectiveType"]
-                SelectElement oSelection268 = new SelectElement(driver.FindElement(By.XPath("//*[@id='ctl00_ddlFinancialObjectiveType']")));//*[@id="ctl00_ddlFinancialObjectiveType"]
+                //     SelectElement oSelection268 = new SelectElement(driver.FindElement(By.XPath("//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_ClientFinancialObjectiveRow_0_ddlFinancialObjectiveType']")));//*[@id="ctl00_ddlFinancialObjectiveType"]
+                //     SelectElement oSelection268 = new SelectElement(driver.FindElement(By.XPath("//*[@id='ctl00_ddlFinancialObjectiveType']")));//*[@id="ctl00_ddlFinancialObjectiveType"]
+
+                SelectElement oSelection268 = new SelectElement(driver.FindElement(By.XPath("//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_ClientFinancialObjectiveRow_6_ddlFinancialObjectiveType']")));
+
+
+
 
                 oSelection268.SelectByText(S268);
                 //*[@id="ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_ddlFinancialObjectiveType"]

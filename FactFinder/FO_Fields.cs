@@ -241,30 +241,44 @@ namespace FactFinder
             //      String add = driver.FindElement(By.XPath("//*[@id='ctl00_trfinancialobjectiverow']")).Text;
             //      Console.WriteLine("Add FO is available or not" + add);
             //      if(add!="Add Financial Objective")
+            //CHJK     driver.FindElement(By.XPath("//*[@id='aspnetForm']/section[2]/section[2]/section[1]/section/section/section/section[1]/div[3]/div[3]/div[1]/div[3]/div[2]/ul/li[2]/a")).Click();
+
             driver.FindElement(By.XPath("//*[@id='aspnetForm']/section[2]/section[2]/section[1]/section/section/section/section[1]/div[3]/div[3]/div[1]/div[3]/div[2]/ul/li[2]/a")).Click();
+
+            driver.FindElement(By.XPath("//*[@id='aspnetForm']/section[2]/section[2]/section[1]/section/section/section/section[1]/div[3]/div[3]/div[1]/div[3]/div[2]/div/div[2]/div/a")).Click();
+
             //  driver.FindElement(By.XPath("//*[@id='aspnetForm']/section[2]/section[2]/section[1]/section/section/section/section[1]/div[3]/div[3]/div[1]/div[3]/div[2]/div/div[2]/div/a")).Click();
             //*[@id="aspnetForm"]/section[2]/section[2]/section[1]/section/section/section/section[1]/div[3]/div[3]/div[1]/div[3]/div[2]/div
             //*[@id="aspnetForm"]/section[2]/section[2]/section[1]/section/section/section/section[1]/div[3]/div[3]/div[1]/div[3]/div[2]/div/div[2]/div
-            string S270 = System.Configuration.ConfigurationManager.AppSettings["P_FO_Type1"];
-            SelectElement oSelection270 = new SelectElement(driver.FindElement(By.XPath("//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_ddlFinancialObjectiveType']")));
+                   string S270 = System.Configuration.ConfigurationManager.AppSettings["P_FO_Type1"];
+                      //SelectElement oSelection270 = new SelectElement(driver.FindElement(By.XPath("//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_ddlFinancialObjectiveType']")));
+                       SelectElement oSelection270 = new SelectElement(driver.FindElement(By.XPath("//*[@id='ctl00_ddlFinancialObjectiveType']")));
+            //  SelectElement oSelection270 = new SelectElement(driver.FindElement(By.XPath("//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjective_0_ddlFinancialObjectiveType']")));
+            //*[@id="ctl00_ddlFinancialObjectiveType"]
             oSelection270.SelectByText(S270);
 
+                  string S2700 = System.Configuration.ConfigurationManager.AppSettings["P_FO_Prio1"];
+            
 
-            string S2700 = System.Configuration.ConfigurationManager.AppSettings["P_FO_Prio1"];
-            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(".//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_trfinancialobjectiverow']/div[1]")));
+//            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(".//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_trfinancialobjectiverow']/div[1]")));
             //*[@id="ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_ddlPriorityType"]
             //SelectElement oSelection2711 = new SelectElement(driver.FindElement(By.XPath("//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_ddlFinancialPriorityType']]")));
-            SelectElement oSelection2700 = new SelectElement(driver.FindElement(By.XPath(".//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_ddlPriorityType']")));
+            //          SelectElement oSelection2700 = new SelectElement(driver.FindElement(By.XPath(".//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_ddlPriorityType']")));
+            SelectElement oSelection2700 = new SelectElement(driver.FindElement(By.XPath("//*[@id='ctl00_ddlPriorityType']")));
             oSelection2700.SelectByText(S2700);
             //*[@id="ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_ClientFinancialObjectiveRow_0_ddlPriorityType"]
             //*[@id="ctl00_ddlPriorityType"]
             //*[@id="ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_ddlPriorityType"]
             //*[@id="ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_ddlFinancialObjectiveType"]
 
-            driver.FindElement(By.XPath("//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_txtShortTerm']")).Clear();
+            //       driver.FindElement(By.XPath("//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_txtShortTerm']")).Clear();
+            //*[@id="ctl00_txtShortTerm"]
+            driver.FindElement(By.XPath("//*[@id='ctl00_txtShortTerm']")).Clear();
 
 
-                driver.FindElement(By.XPath("//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_txtShortTerm']")).SendKeys("Partner Immediate");
+            //    driver.FindElement(By.XPath("//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_txtShortTerm']")).SendKeys("Partner Immediate");
+            driver.FindElement(By.XPath("//*[@id='ctl00_txtShortTerm']")).SendKeys("Partner Immediate");
+
 
             driver.FindElement(By.XPath("//*[@id='ctl00_ctl00_cph1_cph1_CfactsExpressControl_FinancialObjectivesControl_PartnerFinancialObjectiveRow_0_txtMediumTerm']")).Clear();
 

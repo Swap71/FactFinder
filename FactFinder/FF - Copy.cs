@@ -108,7 +108,7 @@ namespace FactFinder
 
         }
         [Test]
-        public void ExpressCFactFinder()
+        public void ExpressCFactFinder_DataValidate()
         {
             Thread.Sleep(2000);
             /*        string title = driver.Title;
